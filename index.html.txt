@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recruitment Specialist | Modern Talent Acquisition</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Plus+Jakarta+Sans', sans-serif; scroll-behavior: smooth; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #eef2ff 0%, #ffffff 50%);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .browser-mockup {
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tab-active {
+            border-bottom: 2px solid #4f46e5;
+            color: #4f46e5;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-indigo-400">
+                        AI Recruiter
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#features" class="hover:text-indigo-600 transition-colors">Features</a>
+                    <a href="#roi" class="hover:text-indigo-600 transition-colors">ROI Analytics</a>
+                    <a href="#security" class="hover:text-indigo-600 transition-colors">Security</a>
+                    <a href="https://recruitment-pro-nine.vercel.app/" target="_blank" class="bg-indigo-600 text-white px-6 py-2.5 rounded-full hover:bg-indigo-700 transition-all shadow-md shadow-indigo-100 flex items-center gap-2">
+                        Launch System <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-20 pb-32 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+                    Next-Gen Talent Acquisition
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8">
+                    Hiring at the <br>
+                    <span class="text-indigo-600">Speed of AI.</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">
+                    Stop manually screening thousands of CVs. Our AI specialist transforms massive applicant pools into strategic shortlists with deep-reasoning match scoring and automated interview guides.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#features" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold text-center hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+                        Explore Capabilities <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                    </a>
+                    <div class="flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-indigo-100 flex items-center justify-center font-bold text-xs">ME</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-emerald-100 flex items-center justify-center font-bold text-xs">AI</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-4 h-4 text-slate-500"></i></div>
+                        </div>
+                        <div class="text-sm font-medium text-slate-500 leading-tight">
+                            Enterprise Ready & <br> UAE Data Sovereign
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="browser-mockup bg-white">
+                    <div class="bg-slate-50 h-8 border-bottom flex items-center px-4 gap-2 border-b border-slate-200">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                    </div>
+                    <img src="https://marzkie05.github.io/AI-recuitment-proposal/analyzes.JPG" alt="System Analysis" class="w-full h-auto">
+                </div>
+                <!-- Floating badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 animate-float hidden md:block">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center font-bold text-xl">78%</div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900 leading-none mb-1">Top Match Found</p>
+                            <p class="text-xs text-slate-500">Processing Time: 0.8s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Capabilities Grid -->
+    <section id="features" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Built for Modern HR Teams</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">A full-cycle platform designed to remove friction from sourcing to first-round interviews.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Sourcing -->
+                <div class="p-8 rounded-3xl bg-slate-50 card-hover border border-slate-100">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="qr-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Zero-Friction Sourcing</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Instant QR portals for every role. Candidates scan and upload instantly at job fairs or via social media. No accounts required.
+                    </p>
+                </div>
+                <!-- Screening -->
+                <div class="p-8 rounded-3xl bg-slate-50 card-hover border border-slate-100">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Deep Semantic Match</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Moves beyond keyword tagging. Analyzes professional tenure, certification gaps, and cultural alignment using Gemini 1.5 Flash.
+                    </p>
+                </div>
+                <!-- Interviewing -->
+                <div class="p-8 rounded-3xl bg-slate-50 card-hover border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="message-square-more"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI Interview Guide</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Generates candidate-specific interview questions. Empowers HR partners to conduct technical screening for any role expertly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive ROI Showcase -->
+    <section id="roi" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-indigo-600/10 blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Measure the <br><span class="text-indigo-400">Impact of Speed</span></h2>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="text-indigo-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">15 Minutes vs 50 Hours</h4>
+                            <p class="text-slate-400">The time required to screen 1,000 CVs. Redirect your team's focus from filtering to interviewing.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="trending-up" class="text-emerald-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">50,000 CV Daily Capacity</h4>
+                            <p class="text-slate-400">Enterprise-grade scale powered by Google's fastest Batch processing architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-2xl">
+                <h4 class="text-slate-900 font-bold mb-6 flex items-center justify-between">
+                    Efficiency Benchmark
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">LIVE DATA</span>
+                </h4>
+                <div class="h-64">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The "Killer Feature" Spotlight -->
+    <section class="py-24 bg-indigo-50/50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Expertise in Every Interview</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    The AI Interview Guide bridges the gap between generalist HR and specialist roles. Never walk into an interview unprepared.
+                </p>
+            </div>
+            
+            <!-- Interview UI Simulation -->
+            <div class="bg-[#1e293b] rounded-3xl p-8 shadow-2xl border border-slate-700 relative overflow-hidden">
+                <div class="flex items-center gap-3 mb-8 pb-4 border-b border-slate-700/50">
+                    <i data-lucide="messages-square" class="text-indigo-400 w-6 h-6"></i>
+                    <h3 class="text-white font-bold text-xl">AI Interview Suggestions</h3>
+                    <span class="ml-auto text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded uppercase tracking-widest font-bold">JD-Analysis Match</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-indigo-100 flex items-start gap-4 transform hover:scale-[1.02] transition-all">
+                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-1">1</span>
+                        "Describe a time you had to explain a technical software issue to a non-technical user. How did you ensure understanding?"
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-indigo-100 flex items-start gap-4 transform hover:scale-[1.02] transition-all">
+                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-1">2</span>
+                        "The role requires managing multiple support requests simultaneously. What tools do you use to prioritize?"
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-indigo-100 flex items-start gap-4 transform hover:scale-[1.02] transition-all">
+                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-1">3</span>
+                        "How do you approach documenting a new bug for an engineering team to reproduce quickly?"
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em]">
+                    Powered by Mark Escobillo AI Specialization
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Sovereignty -->
+    <section id="security" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-40 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center p-6 text-center card-hover">
+                        <i data-lucide="server" class="text-indigo-600 mb-3"></i>
+                        <h5 class="font-bold text-sm">UAE Region Hosting</h5>
+                    </div>
+                    <div class="h-40 bg-indigo-600 rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-lg shadow-indigo-100">
+                        <i data-lucide="lock" class="text-white mb-3"></i>
+                        <h5 class="font-bold text-sm text-white">Private AI Engine</h5>
+                    </div>
+                    <div class="h-40 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center p-6 text-center card-hover">
+                        <i data-lucide="fingerprint" class="text-indigo-600 mb-3"></i>
+                        <h5 class="font-bold text-sm">PII Protection</h5>
+                    </div>
+                    <div class="h-40 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center p-6 text-center card-hover">
+                        <i data-lucide="database" class="text-indigo-600 mb-3"></i>
+                        <h5 class="font-bold text-sm">Sovereign Data</h5>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 leading-tight text-slate-900">Security Built for <br><span class="text-indigo-600">Compliance & Privacy</span></h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        We understand that candidate data is your most sensitive asset. Our system is architected for deployment in secure, localized cloud environments (OCI, Azure UAE) or fully on-premises.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">
+                            <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i>
+                            No data training on public models
+                        </li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">
+                            <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i>
+                            Encrypted document buckets per role
+                        </li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">
+                            <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i>
+                            UAE Data Residency Compliant
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Profile & CTA -->
+    <footer class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-[2.5rem] p-12 shadow-xl border border-slate-100 flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-full border-8 border-slate-50 overflow-hidden flex-shrink-0 shadow-inner">
+                    <img src="https://marzkie05.github.io/AI-recuitment-proposal/mark-profile.png" alt="Mark Escobillo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Mark+Escobillo&background=4f46e5&color=fff&size=512'">
+                </div>
+                <div class="flex-grow">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <h3 class="text-3xl font-extrabold text-slate-900">Mark Ernie Garche Escobillo</h3>
+                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Lead Architect</span>
+                    </div>
+                    <p class="text-lg text-indigo-600 font-bold mb-6">AI Project Coordinator | B.S. Computer Science</p>
+                    <p class="text-slate-500 leading-relaxed mb-8 max-w-2xl">
+                        Expert in bridging advanced technical infrastructure with practical corporate talent acquisition. Certified by Google in AI Data Analysis, App Building, and Workflow Automation.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="mailto:markmay.escobillo@gmail.com" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-slate-800 transition-all">
+                            <i data-lucide="mail" class="w-5 h-5"></i> markmay.escobillo@gmail.com
+                        </a>
+                        <a href="tel:+971524316916" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-slate-50 transition-all">
+                            <i data-lucide="phone" class="w-5 h-5"></i> +971 52 431 6916
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-slate-200 pt-8 text-slate-400 text-sm">
+                <p>&copy; 2026 Enterprise AI Recruitment Specialist. Abu Dhabi, UAE.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-indigo-600 transition-all">Architecture Guide</a>
+                    <a href="#" class="hover:text-indigo-600 transition-all">API Documentation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ROI Chart Initialization
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Manual Screening', 'AI Batch Processing'],
+                datasets: [{
+                    label: 'Hours to Screen 1,000 CVs',
+                    data: [50, 0.25],
+                    backgroundColor: [
+                        'rgba(226, 232, 240, 0.8)',
+                        'rgba(79, 70, 229, 0.9)'
+                    ],
+                    borderColor: [
+                        '#cbd5e1',
+                        '#4338ca'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 12,
+                    barThickness: 60
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(226, 232, 240, 0.5)' },
+                        ticks: { font: { size: 10, weight: 'bold' } }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { size: 12, weight: 'bold' } }
+                    }
+                }
+            }
+        });
+
+        // Simple smooth scroll highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-indigo-600');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-indigo-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
